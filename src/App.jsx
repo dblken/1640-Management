@@ -8,10 +8,12 @@ import WhyUs from './components/WhyUs';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CursorFollower from './components/CursorFollower';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <CursorFollower />
       <Navbar />
       <main>
         <Hero />
