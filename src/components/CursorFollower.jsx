@@ -56,33 +56,25 @@ export default function CursorFollower() {
   return (
     <motion.div
       style={{
-        translateX: cursorX,
-        translateY: cursorY,
+        x: cursorX,
+        y: cursorY,
         left: 0,
         top: 0,
       }}
-      className="fixed pointer-events-none z-[9999] flex items-center justify-center -translate-x-1/2 -translate-y-1/2"
+      className="fixed pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
     >
-      {/* Main Cursor Circle */}
       <motion.div
         animate={{
-          scale: isHovered ? 2.5 : 1,
-          backgroundColor: isHovered ? '#C9A84C' : 'rgba(26, 26, 26, 0.3)',
-          borderColor: isHovered ? '#C9A84C' : '#1a1a1a',
+          scale: isHovered ? 4 : 1,
+          backgroundColor: isHovered ? 'transparent' : '#C9A84C',
+          borderColor: '#C9A84C',
+          borderWidth: isHovered ? '1.5px' : '0px',
           boxShadow: isHovered 
             ? '0 0 20px rgba(201, 168, 76, 0.4)' 
-            : '0 0 0px rgba(0, 0, 0, 0)',
+            : '0 0 10px rgba(201, 168, 76, 0.4)',
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="w-4 h-4 rounded-full border border-charcoal"
-      />
-      
-      {/* Center Dot */}
-      <motion.div
-        animate={{
-          scale: isHovered ? 0 : 1,
-        }}
-        className="absolute w-1 h-1 bg-charcoal rounded-full"
+        className="w-5 h-5 rounded-full"
       />
     </motion.div>
   );

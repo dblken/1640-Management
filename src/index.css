@@ -23,17 +23,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    /* Hide default cursor on desktop */
-    @media (min-width: 1024px) {
-      cursor: none;
-    }
-  }
-
-  /* Ensure interactive elements also hide cursor on desktop */
-  @media (min-width: 1024px) {
-    a, button, input, textarea, [role="button"], .cursor-pointer {
-      cursor: none;
-    }
   }
 
   h1, h2, h3, h4, h5, h6 {
